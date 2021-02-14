@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { Dropdown } from './Dropdown';
 
@@ -25,7 +24,7 @@ const NavBar = () => {
 
     const onMouseLeave = () => {
         if (window.innerWidth < 960) {
-            setDropdown(true);
+            setDropdown(false);
         } else {
             setDropdown(false);
         }
@@ -40,7 +39,7 @@ const NavBar = () => {
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
-                <ul className={click ? 'nav-manu active' : 'nav-menu'}>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                             Home
@@ -65,13 +64,7 @@ const NavBar = () => {
                             Contact
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
-                            Sign up
-                        </Link>
-                    </li>
                 </ul>
-                <Button />
             </nav>
         </>
     )
