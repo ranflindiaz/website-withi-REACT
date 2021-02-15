@@ -1,0 +1,40 @@
+.container{
+    padding: 80px 60px;
+    background: radial-gradient(circle, gray, black);
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title{
+    color: white;
+}
+
+.footer-link{
+    color: royalblue;
+    text-decoration: none;
+    margin: 5px;
+}
+
+@media screen (max-width:960px){
+    
+}
